@@ -1,0 +1,59 @@
+body {
+  background: #222;
+  color: #fff;
+}
+#main_content {
+  width: 700px;
+  margin: auto;
+}
+
+#nametag_wrap {
+  color: #000;
+  background-color: #fff;
+  box-shadow: inset 0px 1px 17px #000;
+  padding: 20px;
+  border-radius: 10px;
+
+}
+
+#nametag_inner {
+  border: 10px solid #F2EBDE;
+  padding: 10px;
+  text-align: center;
+  box-shadow: inset 0px 1px 12px #9B896A;
+}
+
+h2 {
+  font-size: 20px;
+  font-family: sans-serif;
+}
+h1 {
+  font-family: Helvetica;
+  text-shadow: 2px 1px 0px #F2EBDE;
+  font-size: 52px;
+  font-weight: lighter;
+  margin: 13px 0;
+}
+
+
+
+
+
+#backgrounds {
+	min-width: 116px;
+	background: url();
+	background: url() no-repeat center top, url() no-repeat middle top;
+
+}
+
+@font-face {
+  font-family: "whatever";
+  src: url("font_file.ttf")
+  format("truetype")
+  /* 
+    font squirrel 
+    fonts.com
+    google fonts
+  */
+
+}
