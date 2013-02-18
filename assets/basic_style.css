@@ -57,7 +57,7 @@ section {
 
   /* Content */
   .tile_content {
-    padding: 20px;
+    padding: 20px 20px 5px;
     z-index: 10;
     color: #281B11;
   }
@@ -121,7 +121,7 @@ section {
   width: 288px;
   text-align: center;
 }
-#contact .tile_content {padding:10px;}
+#contact .tile_content {padding:15px 10px 10px;}
 #contact a { text-decoration: none; }
 #contact img {margin-right: 10px;}
   
