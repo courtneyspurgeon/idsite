@@ -136,10 +136,12 @@ section {
   margin: 40px 0 12px;
   position: relative;
   width: 100%;
-  max-width: 700px;
+  max-width: 650px;
   float: none;
-  margin: 20px auto 40px;
+  margin: 20px 0 40px;
   box-shadow: 0px 3px 16px #000;
+  float: left;
+  margin-right: 4%;
 }
 
 
@@ -151,25 +153,25 @@ div.tile_wrap:hover {
 
 .nametag_wrap h2 {
   font-weight: normal;
-  height: 52px;
-  line-height: 55px;
-  font-size: 35px;
+  height: 30px;
+  line-height: 30px;
+  font-size: 18px;
   font-family: sans-serif;
   margin: 0px;
   }
   h2 span {
     font-size: 20px;
   }
-h1 {
-  color: #3E2A1A;
-  border: 2px dashed #ccc;
-  border-radius: 10px;
-  padding: 10px 0;
-  font-family: jrhandregular, Helvetica;
-  font-size: 52px;
-  font-weight: lighter;
-  margin: 13px 5px;
-}
+  h1 {
+    color: #3E2A1A;
+    border: 2px dashed #ccc;
+    border-radius: 10px;
+    padding: 10px 0;
+    font-family: jrhandregular, Helvetica;
+    font-size: 52px;
+    font-weight: lighter;
+    margin: 13px 5px;
+  }
 
 /* gradient */
 .gradient .nametag_title {
