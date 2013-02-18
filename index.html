@@ -4,22 +4,130 @@
   <head>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="assets/basic_style.css">
+    <script src="assets/jquery1.9.min.js"></script>
+    <script src="assets/basic.js"></script>
   </head> 
   <body> 
 
     <div id="main_content">
-    	<header id="nametag_wrap">
-        <div id="nametag_inner">
-    		  <h1>Courtney Spurgeon</h1>
-        </div>
+    	<header class="nametag_wrap gradient">
+          <h2 class="nametag_title">Hello, <span>my name is...</span></h2>
+     		  <h1>Courtney Spurgeon</h1>
+          <div class="nametag_bottom"></div>
     	</header>
 
       <section>
-        <header><h2>I like</h2></header>
-        <img src="">
-        <img src="">
+        <div id="col1">
+
+           <div class="tile_wrap rotate" id="iam">
+            <!-- ============= I am a =========== -->
+            <h3 class="tile_title">I am a
+              <span class="show current">frontend dev</span>
+              <span>rails dev</span>
+              <span>client manager</span>
+              <span>user experience designer</span>
+            </h3>
+
+            <div class="tile_content">
+              <p class="show current">I build websites</p>
+              <p>I build rails apps</p>
+              <p>I talk to clients</p>
+              <p>I think through user flow</p>
+            </div>
+
+            <div class="subtitle">
+              <span class="show current">css, html, jQuery, php, rails</span>
+              <span>models, views, controllers (& helpers! <3)</span>
+              <span>writing specs, communication, timelines</span>
+              <span>flow</span>
+            </div>
+          </div><!-- end tile_wrap -->
+
+          
+          <div class="tile_wrap rotate" id="done">
+            <!-- =============== I've done ============= -->
+            <h3 class="tile_title">I've done 
+              <span class="show current">eCommerce</span>
+              <span>web apps</span>
+              <span>small business sites</span>
+            </h3>
+            <div class="tile_content">
+              <p class="show current">Magento. I didn't like it much</p>
+              <p>line-of-business rails apps</p>
+              <p>whole site from inception to launch</p>
+            </div>
+
+            <div class="subtitle">
+              <span class="show current">css, html, php</span>
+              <span>sass, ruby, sql</span>
+              <span>wordpress, php, LAMP</span>
+            </div>
+          </div><!-- end tile_wrap -->
+
+          <div class="tile_wrap">
+            <!-- ============= say hi =========== -->
+            <h3 class="tile_title">Say hi<span></span></h3>
+            <div class="tile_content">
+              <p>Words</p>
+              <p>Ideas</p>
+              <p>People</p>
+            </div>
+            <div class="subtitle">editing, this is how you do it</div>
+          </div><!-- end tile_wrap -->
+
+        </div><!-- end col1 -->
+
+
+        <!-- ========================= Col2 =============================== -->
+        <div id="col2">
+          
+          <div class="tile_wrap rotate" id="likes">
+            <!-- ============= likes =========== -->
+            <h3 class="tile_title">I like 
+              <span class="show current">words</span>
+              <span>people</span>
+              <span>adventure</span>
+              <span>this</span>
+            </h3>
+            <div class="tile_content">
+              <img class="show current" src="assets/img/words.jpg" />
+              <img src="assets/img/people.jpg" />
+              <img src="assets/img/adventure.jpg" />
+              <img src="assets/img/people.jpg" />
+            </div>
+            <div class="subtitle">
+              <span class="show current">editing: say more with less</span>
+              <span>this is everyone</span>
+              <span>all the things</span>
+              <span>why can't this happen more?</span>
+            </div>
+          </div><!-- end tile_wrap -->
+
+          <div class="tile_wrap">
+            <!-- ============= say hi =========== -->
+            <h3 class="tile_title">Contact me<span></span></h3>
+            <div class="tile_content">
+              <p>Linkedin</p>
+              <p>email</p>
+            </div>
+            <div class="subtitle">editing, this is how you do it</div>
+          </div><!-- end tile_wrap -->
+
+
+        </div><!-- end col2 -->
+         
+
+          
+
+
+        
+
+
+          
+
       </section>
     </div>
+
   </body>
 
 </html>
