@@ -1,6 +1,6 @@
 $(function() {
 
-  function next_content(parent_div, fade_int) {
+  function cycle_content(parent_div, fade_int) {
     // hide current, show next
     $(parent_div).find('.current').each(function() {
       $(this).fadeOut(fade_int).removeClass('current');
@@ -12,22 +12,21 @@ $(function() {
     });
   }
   
-  //forward one on click
+  //forward one on title click
   $(".tile_wrap.cycle").on("click", ".tile_title", function(event){
     parent = $(this).parents('.tile_wrap');
-    next_content(parent, 300);
+    cycle_content(parent, 300);
   });
 
   //periodically cycle a set
   cycle_timer = setInterval(function() {
-    // find all rotatable sets
     cycle_sets = $('.cycle');
     rand_index = Math.floor((Math.random()*cycle_sets.length));
     cycle_parent = $(cycle_sets[rand_index]);
 
-    //do not rotate if cursor is in the div
+    //do not rotate if div is hovered over
     if (!cycle_parent.hasClass('hover')) {
-      next_content(cycle_parent, 700);
+      cycle_content(cycle_parent, 700);
     }
   }, 8000);
 
@@ -38,6 +37,18 @@ $(function() {
     $(this).removeClass('hover');
   });
 
-  $('.fill_out_email').html('spurgeon.cj' + "@" + 'gmail.com');
+  //I pretend this makes spam less likely
+  mail = 'spurgeon.cj' + "@" + 'gmail.com'
+  $('.fill_out_email').html(mail).attr('alt', mail);
+
+  //add hover class when hovered
+  $("#contact").on("mouseenter", "img", function(){
+    text = $(this).attr('alt')
+    $('#contact aside span').html(text);
+  }).on("mouseleave", function(){
+    text = $('#contact aside span').attr('alt');
+    $('#contact aside span').html(text);
+  });
+
 
 });
