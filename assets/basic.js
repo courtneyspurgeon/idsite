@@ -1,29 +1,8 @@
 $(function() {
 
-  var timer_int_hash = {
-    likes: 7000,
-    done: 11000,
-    iam: 8000
-  }
-
-  var timer_hash = {
-    likes:  setInterval(function() {
-      next_content('likes');
-    }, timer_int_hash['likes']),
-    done: setInterval(function() {
-      next_content('done');
-    }, timer_int_hash['done']),
-    iam: setInterval(function() {
-      next_content('iam');
-    }, timer_int_hash['iam'])
-  }
-
-
-  function next_content(div_id) {
-    fade_int = 400
-    parent = $('#'+div_id);
+  function next_content(parent_div, fade_int) {
     // hide current, show next
-    parent.find('.current').each(function() {
+    $(parent_div).find('.current').each(function() {
       $(this).fadeOut(fade_int).removeClass('current');
       if ($(this).next().length !== 0) {
         $(this).next().delay(fade_int).fadeIn(fade_int).addClass('current');
@@ -34,24 +13,31 @@ $(function() {
   }
   
   //forward one on click
-  $(".tile_wrap.rotate").on("click", function(event){
-    id = $(this).attr('id');
-    clearInterval(timer_hash[id]);
-    next_content(id);
-  });
-  
-  // Pause carousel when hovered over
-  $(".tile_wrap.rotate").on("mouseenter", function(event){
-    id = $(this).attr('id');
-    clearInterval(timer_hash[id]);
+  $(".tile_wrap.cycle").on("click", ".tile_title", function(event){
+    parent = $(this).parents('.tile_wrap');
+    next_content(parent, 300);
   });
 
-  // resume when hover ends
-  $(".tile_wrap.rotate").on("mouseleave", function(event){
-    id = $(this).attr('id')
-    timer_hash[id] = setInterval(function() {
-      next_content(id);
-    }, timer_int_hash[id]);
+  //periodically cycle a set
+  cycle_timer = setInterval(function() {
+    // find all rotatable sets
+    cycle_sets = $('.cycle');
+    rand_index = Math.floor((Math.random()*cycle_sets.length));
+    cycle_parent = $(cycle_sets[rand_index]);
+
+    //do not rotate if cursor is in the div
+    if (!cycle_parent.hasClass('hover')) {
+      next_content(cycle_parent, 700);
+    }
+  }, 8000);
+
+  //add hover class when hovered
+  $(".tile_wrap").on("mouseenter", function(){
+    $(this).addClass('hover');
+  }).on("mouseleave", function(){
+    $(this).removeClass('hover');
   });
+
+  $('.fill_out_email').html('spurgeon.cj' + "@" + 'gmail.com');
 
 });
