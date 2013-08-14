@@ -10,7 +10,7 @@ body {
 #main_content {
   width: 90%;
   min-width: 300px;
-  max-width: 550px;
+  max-width: 600px;
   margin: auto;
 }
 section {
@@ -32,11 +32,11 @@ section {
   margin: 40px 0 12px;
   position: relative;
   }
-  div.tile_wrap:hover {
+  div.tile_wrap.effect:hover {
     box-shadow: inset 0px 6px 15px #000;
     -webkit-box-shadow: inset 0px 6px 15px #000;
   }
-  div.tile_wrap:hover .tile_content {
+  div.tile_wrap.effect:hover .tile_content {
     transform:scale(0.99);
     -ms-transform:scale(0.99); 
     -moz-transform:scale(0.99); 
@@ -69,15 +69,31 @@ section {
     padding-left: 40px;
     line-height: 22px;
   }
-  .tile_content p .title {
+  .tile_content p .title,
+  .tile_content aside {
     margin-left: -40px;
     font-size: 25px;
     font-family: 'jrhandregular';
     color: #000;
   }
+  .tile_content aside {
+    font-size: 18px;
+    margin-left: 0;
+  }
 
-  /* Aside subtitle */
-  .tile_wrap aside {
+  /* Work examples */
+  .tile_wrap .work_ex {
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+  }
+  .tile_wrap .work_ex img { 
+    border: 1px solid #777;
+    box-shadow: 0px 3px 6px #777;
+    -webkit-box-shadow: 0px 3px 6px #777;
+  }
+
+  /* Aside caption */
+  .tile_wrap aside.caption {
     font-size: 20px;
     background: #ccc;
     color: #000;
@@ -87,6 +103,8 @@ section {
     z-index: 2;
     text-align: center;
   }
+
+  .tile_wrap img { max-width: 550px;}
 
 
 /* ------------------ Cycle Tile Styles ------------------- */
@@ -100,7 +118,7 @@ section {
 
 /* Images */
 .cycle .tile_content img {
-  height: 400px;
+  height: 500px;
   border: 5px solid #fff;
   box-shadow: 0px 3px 10px #000;
   -webkit-box-shadow: 0px 3px 10px #000;
