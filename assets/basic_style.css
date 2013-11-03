@@ -3,7 +3,7 @@
 
 /* ------------- Basic Layout ----------------------- */
 body {
-  background: url(img/bg_tile.png) repeat top right #424751;
+  background-color: #424751;
   color: #fff;
   font-family: Helvetica, sans-serif;
 }
