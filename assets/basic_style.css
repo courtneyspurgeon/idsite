@@ -36,13 +36,6 @@ section {
     box-shadow: inset 0px 6px 15px #000;
     -webkit-box-shadow: inset 0px 6px 15px #000;
   }
-  div.tile_wrap.effect:hover .tile_content {
-    transform:scale(0.99);
-    -ms-transform:scale(0.99); 
-    -moz-transform:scale(0.99); 
-    -webkit-transform:scale(0.99); 
-    -o-transform:scale(0.99); 
-  }
   .tile_title {
     position: absolute;
     top: -40px;
