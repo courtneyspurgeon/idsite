@@ -72,12 +72,12 @@ section {
   .tile_content p .title,
   .tile_content aside {
     margin-left: -40px;
-    font-size: 25px;
-    font-family: 'jrhandregular';
+    font-size: 20px;
+    font-family: 'Lucida Console';
     color: #000;
   }
   .tile_content aside {
-    font-size: 18px;
+    font-size: 16px;
     margin-left: 0;
   }
 
@@ -182,8 +182,8 @@ section {
   border: 2px dashed #ccc;
   border-radius: 10px;
   padding: 10px 0;
-  font-family: jrhandregular, Helvetica;
-  font-size: 52px;
+  font-family: 'Lucida Console', Helvetica;
+  font-size: 50px;
   font-weight: lighter;
   margin: 13px 5px;
 }
@@ -212,13 +212,3 @@ section {
 }
 
 /* ----------------------- Fonts ----------------------- */
-@font-face {
-    font-family: 'jrhandregular';
-    src: url('fonts/jrha-webfont.eot');
-    src: url('fonts/jrha-webfont.eot?#iefix') format('embedded-opentype'),
-         url('fonts/jrha-webfont.woff') format('woff'),
-         url('fonts/jrha-webfont.ttf') format('truetype'),
-         url('fonts/jrha-webfont.svg#jrhandregular') format('svg');
-    font-weight: normal;
-    font-style: normal;
-}
